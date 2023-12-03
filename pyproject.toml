@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "propeller-wing-simulator"
 version = "0.1.0"
-description = "An aerodynamics simulation toolkit focused on evaluating the aerodynamic interference between a propeller and a wing."
+description = "An aerodynamic simulation toolkit focused on evaluating the aerodynamic interference between a propeller and a wing."
 authors = ["Casper Kanaar <casper.kanaar.98@gmail.com>"]
 readme = "README.md"
 packages = [{ include = "src" }]
@@ -47,7 +47,7 @@ exclude = ["venv/"]
 
 [tool.bandit]
 exclude_dirs = [
-    "**/*_test.py",
+    "**/test_*.py",
     "./venv/",
     "./*cache*/",
     "./resources/",
@@ -56,13 +56,13 @@ exclude_dirs = [
 skips = ["B608"]
 
 [tool.pytest.ini_options]
-testpaths = ["src"]
-python_files = ["test_*.py"]
+testpaths = ["tests"]
+python_files = ["*_test.py"]
 addopts = "--strict-markers --disable-pytest-warnings"
 markers = []
 
 [tool.coverage.paths]
-source = ["src", "*/site-packages"]
+source = ["tests", "*/site-packages"]
 omit = ["**/__init__.py", "**/test_*.py"]
 
 [build-system]
