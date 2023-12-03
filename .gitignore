@@ -1,0 +1,29 @@
+# Compiled Python bytecode
+*.py[cod]
+
+# Log files
+*.log
+
+# Package files
+*.jar
+
+# Applications
+*.app
+*.exe
+*.war
+
+# Large media files
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
+
+venv/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+.ipynb_checkpoints/
+.vscode/
